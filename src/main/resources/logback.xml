@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <property name="CONTEXT_NAME" value="java-http-server"/>
+    <contextName>${CONTEXT_NAME}</contextName>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 对日志进行格式化。 -->
+        <encoder>
+            <pattern>
+                [%level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%class][%method][%line] -> %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
